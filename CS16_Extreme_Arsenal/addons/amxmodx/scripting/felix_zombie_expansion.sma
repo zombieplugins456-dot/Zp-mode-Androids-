@@ -21,7 +21,7 @@ new const g_weapon_models[][] = {
     "models/extreme/v_thunder_ak.mdl", "models/extreme/v_plasma_m4.mdl", "models/extreme/v_inferno_xm.mdl",
     "models/extreme/v_vulcan_m249.mdl", "models/extreme/v_golden_deagle.mdl", "models/extreme/v_rail_awp.mdl",
     "models/extreme/v_storm_scout.mdl", "models/extreme/v_frost_p90.mdl", "models/extreme/v_acid_mp5.mdl",
-    "models/extreme/v_soul_reaper.mdl", "models/extreme/v_demon_plasma_claw.mdl", "models/extreme/v_dual_annihilators.mdl",
+    "models/extreme/v_soul_reaper.mdl", "models/extreme/v_demon_hell_claw.mdl", "models/extreme/v_demon_plasma_claw.mdl", "models/extreme/v_dual_annihilators.mdl",
     "models/extreme/v_meteor_ak.mdl", "models/extreme/v_golden_plasma_m4.mdl", "models/extreme/v_void_awp.mdl",
     "models/extreme/v_inferno_galil.mdl", "models/extreme/v_thunder_famas.mdl", "models/extreme/v_quantum_aug.mdl",
     "models/extreme/v_gravity_shotgun.mdl"
@@ -289,6 +289,8 @@ public event_curweapon(id)
     else if (weapon == CSW_FAMAS && mode == 17) set_pev(id, pev_viewmodel2, "models/extreme/v_thunder_famas.mdl");
     else if (weapon == CSW_AUG && mode == 18) set_pev(id, pev_viewmodel2, "models/extreme/v_quantum_aug.mdl");
     else if (weapon == CSW_M3 && mode == 19) set_pev(id, pev_viewmodel2, "models/extreme/v_gravity_shotgun.mdl");
+    else if (weapon == CSW_KNIFE && mode == 11) set_pev(id, pev_viewmodel2, "models/extreme/v_demon_hell_claw.mdl");
+    else if (weapon == CSW_KNIFE && mode == 20) set_pev(id, pev_viewmodel2, "models/extreme/v_demon_plasma_claw.mdl");
     else if (weapon == CSW_ELITE && mode == 12) set_pev(id, pev_viewmodel2, "models/extreme/v_dual_annihilators.mdl");
     if (g_extended_mag[id] && weapon >= CSW_P228 && weapon <= CSW_P90) cs_set_user_bpammo(id, weapon, 240);
     if (g_scope[id] && (weapon == CSW_AWP || weapon == CSW_SCOUT)) cs_set_user_zoom(id, CS_SET_AUGSG552_ZOOM, 1);
